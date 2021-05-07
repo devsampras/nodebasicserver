@@ -13,3 +13,4 @@ npm install
 ```
 npm start
 ```
+Server starts on port 8021
