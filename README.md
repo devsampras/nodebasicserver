@@ -1,15 +1,15 @@
-#Node Basic Server
+# Node Basic Server
 
 an implementation of a basic webserver with Node.js based on Express.js
 
 
-###After Pull
+### After Pull
 install packages
 ```
 npm install
 ```
 
-###Launch server
+### Launch server
 ```
 npm start
 ```
