@@ -16,7 +16,9 @@ server.use((req,res,next)=>{
         res.sendFile(fileToCheck)
     }else{
         res.status(404)
-        res.sendFile(path.join(mainFolder,"404.html"))
+        var notFoundPage=path.join(mainFolder,"404.html")
+        if(fs.existsSync(notFoundPage))
+        res.sendFile(notFoundPage)
         //res.end()
     }
 })
