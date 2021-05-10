@@ -12,7 +12,7 @@ server.get("/",(req,res)=>{
 
 server.use((req,res,next)=>{
     var fileToCheck=path.join(mainFolder,req.url)
-    if(fs.existsSync(fileToCheck)){
+    if(fs.existsSync(fileToCheck) && !fs.lstatSync(fileToCheck).isDirectory()){
         res.sendFile(fileToCheck)
     }else{
         res.status(404)
