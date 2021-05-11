@@ -19,7 +19,11 @@ server.use((req,res,next)=>{
         var notFoundPage=path.join(mainFolder,"404.html")
         if(fs.existsSync(notFoundPage))
         res.sendFile(notFoundPage)
-        //res.end()
+        else
+        {
+            res.status(404)
+            res.end()
+        }
     }
 })
 
